@@ -86,3 +86,13 @@ ul li::before {
     top: 12px;
     left: 8px;
 }
+
+/* change icon when the task is selected*/
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(/images/checked.png);
+}
