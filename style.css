@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* Container styles */
 .container {
     width: 100%;
     min-height: 100vh;
@@ -12,6 +13,7 @@
     padding: 10px;
 }
 
+/* Todo app styles */
 .todo-app {
     width: 100%;
     max-width: 540px;
@@ -21,6 +23,7 @@
     border-radius: 10px;
 }
 
+/* Todo app header styles */
 .todo-app  h2 {
     color: #002765;
     display: flex;
@@ -33,7 +36,7 @@
     margin-left: 10px;
 }
 
-/*styling input field and buttton*/
+/* Input field and button styles */
 .row {
     display: flex;
     align-items: center;
@@ -63,7 +66,7 @@ button {
     border-radius: 40px;
 }
 
-/*styling tasks list-items*/
+/* Tasks list item styles */
 ul li {
     list-style: none;
     font-size: 17px;
@@ -73,7 +76,7 @@ ul li {
     position: relative;
 }
 
-/*Add check circle infront of the tasks*/
+/* Add check circle in front of tasks */
 ul li::before {
     content: '';
     position: absolute;
@@ -87,7 +90,7 @@ ul li::before {
     left: 8px;
 }
 
-/* change icon when the task is selected*/
+/* Change icon when task is selected */
 ul li.checked {
     color: #555;
     text-decoration: line-through;
@@ -97,7 +100,7 @@ ul li.checked::before {
     background-image: url(/images/checked.png);
 }
 
-/*styling the cross symbol*/
+/* Cross symbol styles */
 ul li span{
     position: absolute;
     right: 0;

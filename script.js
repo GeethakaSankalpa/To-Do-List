@@ -2,6 +2,7 @@
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 
+// adds new task to a list
 function addTask(){
     if(inputBox.value === '' ){
         alert("You Must write something!")
@@ -17,8 +18,12 @@ function addTask(){
     saveData();
 }
 
+/**
+ * Event listener for list container clicks
+ * @param {Event} e - event object
+ */
 listContainer.addEventListener("click", function(e){
-    //  name of the element where the event occurred:
+    // check if the clicked element is a list item
     if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked")
         saveData();
@@ -28,10 +33,12 @@ listContainer.addEventListener("click", function(e){
     }
 }, false);
 
+// saves the tasks data to local storage
 function saveData(){
     localStorage.setItem("data", listContainer.innerHTML);
 }
 
+// shows saved tasks
 function showTasks(){
     listContainer.innerHTML = localStorage.getItem("data");
 }
